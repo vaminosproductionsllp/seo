@@ -13,7 +13,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = Number.parseInt(process.env.PORT || '3000', 10);
 const host = process.env.HOST || '0.0.0.0';
-const model = process.env.OPENAI_MODEL || 'gpt-5.5';
+const configuredModel = process.env.OPENAI_MODEL || 'gpt-5.1';
+// Correct the placeholder model value used during initial provisioning.
+const model = configuredModel === 'gpt-5.5' ? 'gpt-5.1' : configuredModel;
 const accessCode = process.env.APP_ACCESS_CODE || '';
 const isProduction = process.env.NODE_ENV === 'production';
 
