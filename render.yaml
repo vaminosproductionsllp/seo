@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: vaminos-blog-topic-generator
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-5.5
+      - key: APP_ACCESS_CODE
+        sync: false
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
