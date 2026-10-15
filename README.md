@@ -17,7 +17,7 @@ A responsive AI-powered SEO blog topic generator for Vaminos Productions LLP. It
 3. Start command: `npm start`
 4. Configure `OPENAI_API_KEY` with an OpenAI Platform API key.
 5. Set `APP_ACCESS_CODE` to a long private passphrase. This is required for generation in production.
-6. Keep `OPENAI_MODEL=gpt-5.5` unless you prefer another model available to your API project.
+6. Keep `OPENAI_MODEL=gpt-5.1` unless you prefer another model available to your API project.
 7. Set `NODE_ENV=production`. The included `render.yaml` configures the Singapore region and free plan.
 
 The health check is `/api/health`. It reports whether configuration is present, but never exposes secrets.
